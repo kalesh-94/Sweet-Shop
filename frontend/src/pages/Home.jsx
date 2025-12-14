@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaCandyCane, FaShoppingCart, FaChartLine, FaUsers, FaStar, FaLeaf } from 'react-icons/fa';
 import { GiChocolateBar, GiCupcake } from 'react-icons/gi';
 
+
 const Home = () => {
   const features = [
     {
@@ -33,19 +34,19 @@ const Home = () => {
   const popularSweets = [
     {
       name: 'Chocolate Truffle',
-      price: '$4.99',
+      price: `₹30`,
       image: 'https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg',
       category: 'Chocolate'
     },
     {
       name: 'Rainbow Lollipop',
-      price: '$2.49',
+      price: '₹41',
       image: 'https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg',
       category: 'Candy'
     },
     {
       name: 'Vanilla Cupcake',
-      price: '$3.99',
+      price: '₹45',
       image: 'https://images.pexels.com/photos/1055270/pexels-photo-1055270.jpeg',
       category: 'Pastry'
     }
