@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { sweetsAPI } from '../api/sweets';
 import AdminSweetCard from '../components/AdminSweetCard';
 import SweetModal from '../components/SweetModal';
+import Navbar from '../components/Navbar';
 
 const Admin = () => {
   const [sweets, setSweets] = useState([]);
@@ -85,6 +86,8 @@ const Admin = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -129,6 +132,7 @@ const Admin = () => {
         />
       )}
     </div>
+    </>
   );
 };
 

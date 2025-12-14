@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { validateEmail, validatePassword } from '../utils/helpers';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
+import { validateEmail, validatePassword } from "../utils/helpers";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
-  
+
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const { register, isAdmin } = useAuth();
@@ -23,7 +23,7 @@ const Register = () => {
     });
     setErrors({
       ...errors,
-      [e.target.name]: '',
+      [e.target.name]: "",
     });
   };
 
@@ -31,30 +31,28 @@ const Register = () => {
     const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
 
     if (!validateEmail(formData.email)) {
-      newErrors.email = 'Invalid email address';
+      newErrors.email = "Invalid email address";
     }
 
     if (!validatePassword(formData.password)) {
-      newErrors.password = 'Password must be at least 6 characters';
+      newErrors.password = "Password must be at least 6 characters";
     }
 
     if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
+      newErrors.confirmPassword = "Passwords do not match";
     }
 
     return newErrors;
   };
 
-
-
-// useEffect(() => {
-//   localStorage.removeItem("token");
+  // useEffect(() => {
+  //   localStorage.removeItem("token");
   // localStorage.removeItem("user");
-// }, []);
+  // }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,9 +73,8 @@ const Register = () => {
     });
 
     if (result.success) {
-      navigate('/login')
+      navigate("/login");
       console.log("Done");
-      
     } else {
       setErrors({ general: result.error });
     }
@@ -93,6 +90,15 @@ const Register = () => {
         </div>
 
         <div className="card p-8">
+          <div className="mb-4 text-left">
+            <Link
+              to="/home"
+              className="inline-flex items-center text-sm text-gray-600 hover:text-pink-600 transition-colors"
+            >
+              ← Back to Home
+            </Link>
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             {errors.general && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
@@ -101,7 +107,10 @@ const Register = () => {
             )}
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Full Name
               </label>
               <input
@@ -110,14 +119,19 @@ const Register = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`input-field ${errors.name ? 'border-red-500' : ''}`}
+                className={`input-field ${errors.name ? "border-red-500" : ""}`}
                 placeholder="John Doe"
               />
-              {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
+              {errors.name && (
+                <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+              )}
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email Address
               </label>
               <input
@@ -126,14 +140,21 @@ const Register = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`input-field ${errors.email ? 'border-red-500' : ''}`}
+                className={`input-field ${
+                  errors.email ? "border-red-500" : ""
+                }`}
                 placeholder="you@example.com"
               />
-              {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+              )}
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Password
               </label>
               <input
@@ -142,14 +163,21 @@ const Register = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`input-field ${errors.password ? 'border-red-500' : ''}`}
+                className={`input-field ${
+                  errors.password ? "border-red-500" : ""
+                }`}
                 placeholder="At least 6 characters"
               />
-              {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
+              {errors.password && (
+                <p className="mt-1 text-sm text-red-600">{errors.password}</p>
+              )}
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Confirm Password
               </label>
               <input
@@ -158,10 +186,16 @@ const Register = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className={`input-field ${errors.confirmPassword ? 'border-red-500' : ''}`}
+                className={`input-field ${
+                  errors.confirmPassword ? "border-red-500" : ""
+                }`}
                 placeholder="Re-enter your password"
               />
-              {errors.confirmPassword && <p className="mt-1 text-sm text-red-600">{errors.confirmPassword}</p>}
+              {errors.confirmPassword && (
+                <p className="mt-1 text-sm text-red-600">
+                  {errors.confirmPassword}
+                </p>
+              )}
             </div>
 
             <button
@@ -169,14 +203,17 @@ const Register = () => {
               disabled={loading}
               className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Creating Account...' : 'Create Account'}
+              {loading ? "Creating Account..." : "Create Account"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-gray-600">
-              Already have an account?{' '}
-              <Link to="/login" className="text-pink-600 hover:text-pink-700 font-medium">
+              Already have an account?{" "}
+              <Link
+                to="/login"
+                className="text-pink-600 hover:text-pink-700 font-medium"
+              >
                 Sign in here
               </Link>
             </p>

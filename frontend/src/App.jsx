@@ -6,7 +6,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
 
-import Navbar from './components/Navbar';
+
 import ProtectedRoute from './components/ProtectedRoute';
 import { useAuth } from './hooks/useAuth';
 
@@ -19,7 +19,7 @@ function App() {
     <Router>
       <div className="min-h-screen">
         {/* Show navbar only after auth check */}
-        <Navbar />
+      
 
         <Routes>
           

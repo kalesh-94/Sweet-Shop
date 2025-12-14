@@ -100,7 +100,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 font-sweet">
-              Why Choose Sweet Delights?
+              Why Choose Sweet ?
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Experience the perfect blend of delicious sweets and modern management tools
@@ -205,38 +205,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-12 relative overflow-hidden">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full"></div>
-              
-              <h2 className="text-4xl font-bold text-white mb-6 font-sweet">
-                Ready to Manage Your Sweet Shop?
-              </h2>
-              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                Join thousands of sweet shop owners who trust our management system
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/register"
-                  className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  Start Free Trial
-                </Link>
-                <Link
-                  to="/login"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300"
-                >
-                  Schedule Demo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -248,7 +217,7 @@ const Home = () => {
                   <span className="text-2xl text-pink-600 font-bold">🍬</span>
                 </div>
                 <span className="text-2xl font-sweet font-bold">
-                  Sweet Delights
+                  Sweet Shop
                 </span>
               </div>
               <p className="text-gray-400">
