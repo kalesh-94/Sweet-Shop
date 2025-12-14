@@ -41,7 +41,7 @@ const Home = () => {
     {
       name: 'Rainbow Lollipop',
       price: '₹41',
-      image: 'https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg',
+      image: 'https://i.etsystatic.com/15676527/r/il/f14ec4/5083067288/il_fullxfull.5083067288_qrs2.jpg',
       category: 'Candy'
     },
     {
