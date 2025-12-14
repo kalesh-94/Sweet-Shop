@@ -6,7 +6,7 @@ export const sweetsAPI = {
     const response = await axios.get('/sweets/');
     return response.data.map((sweet) => ({
       ...sweet,
-      id: sweet._id, // normalize MongoDB _id
+      id: sweet._id, 
     }));
   },
 
