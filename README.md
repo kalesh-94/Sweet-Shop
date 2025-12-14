@@ -216,4 +216,4 @@ POST /api/sweets/{id}/restock (Admin)```
 
 ## 📝 License
 
-Educational & assessment project
+Kalesh Patil
