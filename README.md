@@ -187,7 +187,7 @@ POST /api/sweets/{id}/purchase
 POST /api/sweets/{id}/restock (Admin)```
 
 
-
+```
 ---
 
 ## 🧪 Testing
