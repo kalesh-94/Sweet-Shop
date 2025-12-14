@@ -72,7 +72,7 @@ const AdminSweetCard = ({ sweet, onEdit, onDelete, onRestock }) => {
 
         {/* Actions */}
         <div className="border-t pt-5 space-y-4">
-          {/* Restock */}
+          {/* Restock here by admin*/}
           <div className="flex gap-3">
             <input
               type="number"

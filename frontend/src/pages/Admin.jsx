@@ -107,9 +107,9 @@ const Admin = () => {
             <AdminSweetCard
               key={sweet.id}
               sweet={sweet}
-              onEdit={handleEdit}
-              onDelete={handleDelete}
-              onRestock={handleRestock}
+              onEdit={handleEdit} // hadling Edit here
+              onDelete={handleDelete} //// hadling Delete here
+              onRestock={handleRestock} //// hadling Restoking here
             />
           ))}
         </div>

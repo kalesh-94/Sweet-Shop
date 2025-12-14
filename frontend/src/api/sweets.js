@@ -1,7 +1,7 @@
 import axios from './axios';
 
 export const sweetsAPI = {
-  // ✅ GET ALL SWEETS
+  //  GET ALL SWEETS
   getAllSweets: async () => {
     const response = await axios.get('/sweets/');
     return response.data.map((sweet) => ({
@@ -10,13 +10,13 @@ export const sweetsAPI = {
     }));
   },
 
-  // ✅ GET SWEET BY ID
+  //  GET SWEET BY ID
   getSweetById: async (id) => {
     const response = await axios.get(`/sweets/${id}`);
     return response.data;
   },
 
-  // ✅ CREATE SWEET (ADMIN ONLY)
+  //  CREATE SWEET (ADMIN ONLY)
   createSweet: async (sweetData) => {
     const payload = {
       name: sweetData.name,
@@ -31,7 +31,7 @@ export const sweetsAPI = {
     return response.data;
   },
 
-  // ✅ UPDATE SWEET (ADMIN ONLY)
+  //  UPDATE SWEET (ADMIN ONLY)
   updateSweet: async (id, sweetData) => {
     const payload = {
       name: sweetData.name,
@@ -46,13 +46,13 @@ export const sweetsAPI = {
     return response.data;
   },
 
-  // ✅ DELETE SWEET (ADMIN ONLY)
+  //  DELETE SWEET (ADMIN ONLY)
   deleteSweet: async (id) => {
     const response = await axios.delete(`/sweets/${id}`);
     return response.data;
   },
 
-  // ✅ RESTOCK SWEET (QUERY PARAM, ADMIN ONLY)
+  //  RESTOCK SWEET (QUERY PARAM, ADMIN ONLY)
   restockSweet: async (id, quantity) => {
     const response = await axios.post(
       `/sweets/${id}/restock?quantity=${quantity}`
@@ -60,7 +60,7 @@ export const sweetsAPI = {
     return response.data;
   },
 
-  // ✅ PURCHASE SWEET (QUERY PARAM)
+  //  PURCHASE SWEET (QUERY PARAM)
   purchaseSweet: async (id, quantity) => {
     const response = await axios.post(
       `/sweets/${id}/purchase?quantity=${quantity}`
