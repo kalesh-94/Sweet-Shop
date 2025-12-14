@@ -30,6 +30,7 @@ export const useAuth = () => {
       // localStorage.setItem('token', data.token);
       // localStorage.setItem('user', JSON.stringify(data.user));
       // setUser(data.user);
+      
       return { success: true };
     } catch (error) {
       return { success: false, error: error.response?.data?.message || 'Registration failed' };
