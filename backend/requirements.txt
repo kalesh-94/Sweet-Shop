@@ -3,7 +3,9 @@ uvicorn
 python-dotenv
 motor
 pydantic
-passlib[bcrypt]
+passlib==1.7.4 
+bcrypt==4.0.1
 python-jose
 pytest
 httpx
+email-validator
