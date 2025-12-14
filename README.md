@@ -116,20 +116,22 @@ JWT_EXPIRE_MINUTES=60
 ```
 
 ### Frontend `.env`
-VITE_API_BASE_URL=http://localhost:8000/api
-
 ```
+VITE_API_BASE_URL=http://localhost:8000/api
+````
 
----
 
 ## ▶️ Running the Project
-
+```
 ### Backend
 cd backend
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+
+
+```
 
 ```
 
@@ -141,56 +143,50 @@ http://localhost:8000
 ---
 
 ### Frontend
-cd frontend
+
+```cd frontend
 npm install
-npm run dev
+npm run dev```
 
-```
 
-Frontend runs at:
-http://localhost:5173
+```Frontend runs at:
+http://localhost:5173```
 
-```
 
----
 
 ## 🔑 Demo Credentials
 
 ### Admin
-Email: admin@gmail.com
-Password: admin123
+```Email: admin@gmail.com
+Password: admin123```
 
-shell
-Copy code
+
 
 ### User
-Email: user1@gmail.com
+```Email: user1@gmail.com
 Password: 123456
+```
 
-yaml
-Copy code
 
 ---
 
 ## 🔗 API Endpoints
 
 ### Auth
-POST /api/auth/register
-POST /api/auth/login
+```POST /api/auth/register
+POST /api/auth/login```
 
-shell
-Copy code
+
 
 ### Sweets
-GET /api/sweets
+```GET /api/sweets
 POST /api/sweets (Admin)
 PUT /api/sweets/{id} (Admin)
 DELETE /api/sweets/{id} (Admin)
 POST /api/sweets/{id}/purchase
-POST /api/sweets/{id}/restock (Admin)
+POST /api/sweets/{id}/restock (Admin)```
 
-yaml
-Copy code
+
 
 ---
 
@@ -204,8 +200,8 @@ Copy code
 
 ## 🌍 Deployment
 
-- Backend: Render / Railway / AWS
-- Frontend: Vercel / Netlify
+- Backend: Render 
+- Frontend: Vercel
 - Database: MongoDB Atlas
 
 ---
