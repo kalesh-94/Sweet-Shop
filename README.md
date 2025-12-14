@@ -121,22 +121,19 @@ VITE_API_BASE_URL=http://localhost:8000/api
 ````
 
 
-## ▶️ Running the Project
+## ▶️ Running the Project Backend
 ```
 ### Backend
-cd backend
+```cd backend
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload```
 
 
-```
-
-```
 
 Backend runs at:
-http://localhost:8000
+```http://localhost:8000```
 
 ```
 
