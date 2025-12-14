@@ -52,6 +52,7 @@ A full-stack Sweet Shop Management System with role-based authentication, invent
 ## 📁 Project Structure
 
 ### Backend
+```
 backend/
 ├── app/
 │ ├── api/
@@ -69,11 +70,11 @@ backend/
 │ ├── main.py
 │ └── tests/
 └── requirements.txt
+```
 
-shell
-Copy code
 
 ### Frontend
+```
 frontend/
 ├── src/
 │ ├── api/
@@ -99,7 +100,7 @@ frontend/
 │ ├── App.jsx
 │ └── main.jsx
 
-
+```
 
 ---
 
