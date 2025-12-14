@@ -95,19 +95,19 @@ npm run preview
 ## Demo Credentials
 
 ### Admin Account
-- Email: `admin@sweet.com`
-- Password: `admin123`
+- Email: `admin@gmail.com`
+- Password: `admin1`
 
 ### Regular User Account
-- Email: `user@sweet.com`
-- Password: `user123`
+- Email: `user1@gmail.com`
+- Password: `123456`
 
 ## Environment Variables
 
 Create a `.env` file in the root directory:
 
 ```
-VITE_API_BASE_URL=http://localhost:3000/api
+VITE_API_BASE_URL=http://localhost:8000/api
 ```
 
 ## API Configuration

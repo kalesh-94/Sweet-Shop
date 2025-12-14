@@ -22,14 +22,14 @@ function App() {
         <Navbar />
 
         <Routes>
-          {/* 🏠 Home */}
+          
           <Route path="/" element={<Home />} />
 
-          {/* 🔐 Auth */}
+         
           <Route path="/login" element={<LoginRoute />} />
           <Route path="/register" element={<RegisterRoute />} />
 
-          {/* 👤 User */}
+          
           <Route
             path="/dashboard"
             element={
@@ -39,7 +39,7 @@ function App() {
             }
           />
 
-          {/* 🛠 Admin */}
+         
           <Route
             path="/admin"
             element={
@@ -49,7 +49,7 @@ function App() {
             }
           />
 
-          {/* ❌ Fallback */}
+          
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
@@ -57,7 +57,7 @@ function App() {
   );
 }
 
-/* ---------- Route Guards ---------- */
+/* ---------- Route Guards */
 
 const LoginRoute = () => {
   const { user } = useAuth();
