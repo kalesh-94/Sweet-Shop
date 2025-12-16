@@ -1,95 +1,109 @@
-import { Link } from 'react-router-dom';
-import { FaCandyCane, FaShoppingCart, FaChartLine, FaUsers, FaStar, FaLeaf } from 'react-icons/fa';
-import { GiChocolateBar, GiCupcake } from 'react-icons/gi';
-
+import { Link } from "react-router-dom";
+import {
+  FaCandyCane,
+  FaShoppingCart,
+  FaChartLine,
+  FaUsers,
+  FaStar,
+  FaLeaf,
+} from "react-icons/fa";
+import { GiChocolateBar, GiCupcake } from "react-icons/gi";
 
 const Home = () => {
   const features = [
     {
       icon: <FaShoppingCart className="text-3xl" />,
-      title: 'Easy Shopping',
-      description: 'Browse and purchase sweets with just a few clicks',
-      color: 'from-pink-500 to-rose-500'
+      title: "Easy Shopping",
+      description: "Browse and purchase sweets with just a few clicks",
+      color: "from-pink-500 to-rose-500",
     },
     {
       icon: <FaChartLine className="text-3xl" />,
-      title: 'Real-time Inventory',
-      description: 'Track stock levels and get notified when items are low',
-      color: 'from-purple-500 to-indigo-500'
+      title: "Real-time Inventory",
+      description: "Track stock levels and get notified when items are low",
+      color: "from-purple-500 to-indigo-500",
     },
     {
       icon: <GiChocolateBar className="text-3xl" />,
-      title: 'Premium Quality',
-      description: 'Only the finest ingredients in our delicious sweets',
-      color: 'from-amber-500 to-orange-500'
+      title: "Premium Quality",
+      description: "Only the finest ingredients in our delicious sweets",
+      color: "from-amber-500 to-orange-500",
     },
     {
       icon: <FaUsers className="text-3xl" />,
-      title: 'Admin Control',
-      description: 'Comprehensive management tools for shop owners',
-      color: 'from-emerald-500 to-teal-500'
-    }
+      title: "Admin Control",
+      description: "Comprehensive management tools for shop owners",
+      color: "from-emerald-500 to-teal-500",
+    },
   ];
 
   const popularSweets = [
     {
-      name: 'Chocolate Truffle',
+      name: "Chocolate Truffle",
       price: `₹30`,
-      image: 'https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg',
-      category: 'Chocolate'
+      image:
+        "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg",
+      category: "Chocolate",
     },
     {
-      name: 'Rainbow Lollipop',
-      price: '₹41',
-      image: 'https://i.etsystatic.com/15676527/r/il/f14ec4/5083067288/il_fullxfull.5083067288_qrs2.jpg',
-      category: 'Candy'
+      name: "Rainbow Lollipop",
+      price: "₹41",
+      image:
+        "https://i.etsystatic.com/15676527/r/il/f14ec4/5083067288/il_fullxfull.5083067288_qrs2.jpg",
+      category: "Candy",
     },
     {
-      name: 'Vanilla Cupcake',
-      price: '₹45',
-      image: 'https://images.pexels.com/photos/1055270/pexels-photo-1055270.jpeg',
-      category: 'Pastry'
-    }
+      name: "Vanilla Cupcake",
+      price: "₹45",
+      image:
+        "https://images.pexels.com/photos/1055270/pexels-photo-1055270.jpeg",
+      category: "Pastry",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-[url('https://t3.ftcdn.net/jpg/08/55/67/26/360_F_855672614_mZg0kZI3HEw8Ozlba3xbPEN8M6c9UNyo.jpg')] h-screen bg-cover bg-no-repeat text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="relative container mx-auto px-4 py-24 md:py-32">
+      <section className="relative h-screen overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="https://t3.ftcdn.net/jpg/08/55/67/26/360_F_855672614_mZg0kZI3HEw8Ozlba3xbPEN8M6c9UNyo.jpg"
+          alt="Sweet Shop Background"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center mb-6">
-           
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-sweet animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Welcome to Sweet Shop
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Your one-stop destination for managing and enjoying the finest sweets
+              Your one-stop destination for managing and enjoying the finest
+              sweets
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/register"
-                className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-white text-pink-600 px-8 py-3 rounded-full text-lg font-semibold hover:scale-105 transition"
               >
                 Get Started
               </Link>
               <Link
                 to="/login"
-                className="bg-white/20 backdrop-blur-sm hover:bg-white/30 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 border-2 border-white"
+                className="bg-white/20 backdrop-blur-sm px-8 py-3 rounded-full text-lg font-semibold border border-white hover:bg-white/30 transition"
               >
                 Sign In
               </Link>
             </div>
           </div>
         </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 animate-bounce">
-          <GiCupcake className="text-4xl opacity-50" />
-        </div>
-        
       </section>
 
       {/* Features Section */}
@@ -100,25 +114,26 @@ const Home = () => {
               Why Choose Sweet ?
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Experience the perfect blend of delicious sweets and modern management tools
+              Experience the perfect blend of delicious sweets and modern
+              management tools
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
                 className="card p-6 text-center group hover:shadow-2xl transition-all duration-300"
               >
-                <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${feature.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`inline-flex p-4 rounded-full bg-gradient-to-r ${feature.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
-                  {feature.description}
-                </p>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -136,7 +151,7 @@ const Home = () => {
               A taste of what you can manage and enjoy
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {popularSweets.map((sweet, index) => (
               <div
@@ -187,7 +202,9 @@ const Home = () => {
               <div className="text-gray-600">Sweet Varieties</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">10K+</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">
+                10K+
+              </div>
               <div className="text-gray-600">Happy Customers</div>
             </div>
             <div>
@@ -201,8 +218,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-     
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -222,19 +237,31 @@ const Home = () => {
               </p>
             </div>
             <div className="flex space-x-6">
-              <Link to="/login" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/login"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Login
               </Link>
-              <Link to="/register" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/register"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Register
               </Link>
-              <Link to="/dashboard" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/dashboard"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Dashboard
               </Link>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Sweet Management System. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} Sweet Management System. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </footer>
