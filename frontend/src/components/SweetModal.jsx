@@ -130,10 +130,10 @@ const SweetModal = ({ sweet, onClose, onSave }) => {
               className="input-field"
               required
             >
-              <option value="candy">Mithai</option>
+              <option value="mithai">Mithai</option>
               <option value="chocolate">Chocolate</option>
               <option value="gummy">Gummy</option>
-              <option value="gummy">pastry</option>
+              <option value="pastry">pastry</option>
               <option value="candy">Candy</option>
             </select>
           </div>

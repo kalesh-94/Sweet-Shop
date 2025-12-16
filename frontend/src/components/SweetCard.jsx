@@ -21,7 +21,7 @@ const SweetCard = ({ sweet, onPurchase }) => {
     <div className="card overflow-hidden flex flex-col h-full">
       <div className="relative h-48 overflow-hidden bg-gray-200">
         <img
-          src={sweet.imgurl || sweet.image}
+          src={sweet.imgurl || '/placeholder.png'}
           alt={sweet.name}
           className="w-full h-full object-cover"
           onError={(e) => {
