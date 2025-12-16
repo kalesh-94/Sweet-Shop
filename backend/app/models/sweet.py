@@ -1,5 +1,14 @@
 from pydantic import BaseModel, Field
+from enum import Enum
 
+
+
+class SweetCategory(str, Enum):
+    chocolate = "chocolate"
+    gummy = "gummy"
+    candy = "candy"
+    mithai = "mithai"
+    pastry = "pastry"
 
 class SweetModel(BaseModel):
     """
@@ -8,7 +17,7 @@ class SweetModel(BaseModel):
     """
     name: str = Field(..., min_length=1)
     description: str
-    category: str = Field(..., min_length=1)
+    category: SweetCategory
     price: float = Field(..., gt=0)
     quantity: int = Field(..., ge=0)
     imgurl: str
