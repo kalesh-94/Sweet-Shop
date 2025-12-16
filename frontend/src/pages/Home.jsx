@@ -55,14 +55,12 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 text-white overflow-hidden">
+      <section className="relative bg-[url('https://t3.ftcdn.net/jpg/08/55/67/26/360_F_855672614_mZg0kZI3HEw8Ozlba3xbPEN8M6c9UNyo.jpg')] h-screen bg-cover bg-no-repeat text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center justify-center mb-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-                <FaCandyCane className="text-4xl" />
-              </div>
+           
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 font-sweet animate-fade-in">
               Welcome to Sweet Shop
@@ -89,11 +87,9 @@ const Home = () => {
         
         {/* Decorative elements */}
         <div className="absolute top-10 left-10 animate-bounce">
-          <GiCupcake className="text-4xl opacity-30" />
+          <GiCupcake className="text-4xl opacity-50" />
         </div>
-        <div className="absolute bottom-10 right-10 animate-pulse">
-          <FaCandyCane className="text-5xl opacity-30" />
-        </div>
+        
       </section>
 
       {/* Features Section */}
