@@ -76,6 +76,9 @@ const Home = () => {
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute top-10 left-10 z-20 opacity-40 animate-bounce">
+          <GiCupcake className="text-5xl text-white" />
+        </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 text-white">
