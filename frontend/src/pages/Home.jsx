@@ -39,11 +39,11 @@ const Home = () => {
 
   const popularSweets = [
     {
-      name: "Chocolate Truffle",
+      name: "Laddu",
       price: `₹30`,
       image:
-        "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg",
-      category: "Chocolate",
+        "https://www.murarisweets.com/cdn/shop/files/MotichoorLaddu4.png?v=1709528857",
+      category: "Mithai(Sweets)",
     },
     {
       name: "Rainbow Lollipop",
