@@ -44,9 +44,7 @@ const Login = () => {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-pink-600 mb-2">Sweet Shop</h1>
-          <p className="text-gray-600">
-            Welcome back! Please login to continue
-          </p>
+        
         </div>
 
         <div className="card p-8">
@@ -57,6 +55,8 @@ const Login = () => {
             >
               ← Back to Home
             </Link>
+          </div>
+          <div className="text-center text-2xl font-semibold"><p className="mb-8 text-gray-600">Welcome back! Please login to continue</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

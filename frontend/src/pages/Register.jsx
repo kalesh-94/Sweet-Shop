@@ -86,7 +86,7 @@ const Register = () => {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-pink-600 mb-2">Sweet Shop</h1>
-          <p className="text-gray-600">Create your account to get started</p>
+          
         </div>
 
         <div className="card p-8">
@@ -97,8 +97,9 @@ const Register = () => {
             >
               ← Back to Home
             </Link>
+            
           </div>
-
+          <div className="text-center text-2xl font-semibold"><p className="mb-8 text-gray-600">Create your account to get started</p></div>
           <form onSubmit={handleSubmit} className="space-y-6">
             {errors.general && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">

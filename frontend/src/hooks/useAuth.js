@@ -33,7 +33,7 @@ export const useAuth = () => {
       
       return { success: true };
     } catch (error) {
-      return { success: false, error: error.response?.data?.message || 'Registration failed' };
+      return { success: false, error: error.response?.data?.message || 'Already Have an Account Please Login !' };
     }
   };
 
